@@ -1,0 +1,28 @@
+﻿<Page x:Class="TestingApp.Auth"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestingApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Auth">
+
+    <Grid>
+        <StackPanel Width="400" Height="450">
+            <Label x:Name="label" HorizontalContentAlignment="Center" Margin="20,30,20,30" VerticalContentAlignment="Center" FontSize="30" Content="Авторизация"/>
+            <Label x:Name="LogLbl" FontSize="20" Content="Логин"/>
+            <TextBox x:Name="Log" Height="30" FontSize="20" TextWrapping="Wrap" Text=""/>
+            <Label x:Name="PassLbl" FontSize="20" Content="Пароль"/>
+            <TextBox x:Name="Pass" Height="30" FontSize="20" TextWrapping="Wrap" Text=""/>
+            <Button x:Name="StudBtn" FontSize="20" Content="Войти как студент" HorizontalAlignment="Center" Margin="30" Click="StudBtn_Click"/>
+            <StackPanel Height="100" Orientation="Horizontal" Margin="100,0,100,0">
+                <Button x:Name="Open" Content="Войти" Width="75" HorizontalAlignment="Left" Margin="0,0,50,0" VerticalAlignment="Center" FontSize="20" Click="Open_Click"/>
+                <Button x:Name="Close" Content="Отмена" Width="75" HorizontalAlignment="Right"  VerticalAlignment="Center" FontSize="20" Click="Close_Click"/>
+
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
