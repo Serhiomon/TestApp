@@ -32,7 +32,7 @@ namespace TestingApp
 
         private void CreateQ_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Setting());
+            NavigationService.Navigate(new CreateQ());
         }
 
         private void Close_Click(object sender, RoutedEventArgs e)

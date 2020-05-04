@@ -56,6 +56,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Buffer.cs" />
+    <Compile Include="CreateQ.xaml.cs">
+      <DependentUpon>CreateQ.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Disclaimer.xaml.cs">
       <DependentUpon>Disclaimer.xaml</DependentUpon>
     </Compile>
@@ -70,6 +73,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Auth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateQ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
