@@ -31,13 +31,15 @@
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="237" Margin="10,10,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="114">
             <TextBlock x:Name="textBox" Height="40" Text="Изменить пароль администратора" TextWrapping="Wrap" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Label Content="Пароль" HorizontalContentAlignment="Center" Height="25"></Label>
+            <Label Content="Введите пароль" HorizontalContentAlignment="Center" Height="25"></Label>
+            <Label Content="Повторите пароль" HorizontalContentAlignment="Center" Height="25"></Label>
         </StackPanel>
         <StackPanel Grid.Column="2" HorizontalAlignment="Left" Height="237" Margin="10,10,0,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="379" Grid.ColumnSpan="3">
             <TextBox x:Name="NewPass" Margin="10,50,10,0" VerticalContentAlignment="Center"></TextBox>
+            <TextBox x:Name="NewPass2" Margin="10,10,10,0" VerticalContentAlignment="Center"></TextBox>
         </StackPanel>
-        <Button x:Name="OkBtn" Content="Сохранить" Grid.Column="4" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="113" Height="44" RenderTransformOrigin="0.512,0.167"/>
-        <Button x:Name="Cancel" Content="Отмена" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="114" Height="44" Click="button1_Click"/>
+        <Button x:Name="OkBtn" Content="Сохранить" Grid.Column="4" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="113" Height="44" RenderTransformOrigin="0.512,0.167" Click="OkBtn_Click"/>
+        <Button x:Name="Cancel" Content="Отмена" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="114" Height="44" Click="Back_Click"/>
 
     </Grid>
 </Page>

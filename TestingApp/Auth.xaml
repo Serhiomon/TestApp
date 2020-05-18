@@ -7,14 +7,17 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Auth">
+    <Page.Resources>
+        
+    </Page.Resources>
 
     <Grid>
         <StackPanel Width="400" Height="450">
-            <Label x:Name="label" HorizontalContentAlignment="Center" Margin="20,30,20,30" VerticalContentAlignment="Center" FontSize="30" Content="Авторизация"/>
+            <Label x:Name="label" HorizontalContentAlignment="Center" Margin="20,30,20,30" VerticalContentAlignment="Center" FontSize="35" Content="Авторизация" FontFamily="Road Rage(RUS BY LYAJKA)"/>
             <Label x:Name="LogLbl" FontSize="20" Content="Логин"/>
-            <TextBox x:Name="Log" Height="30" FontSize="20" TextWrapping="Wrap" Text=""/>
+            <TextBox x:Name="Log" Height="30" FontSize="20" TextWrapping="Wrap" Text="" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <Label x:Name="PassLbl" FontSize="20" Content="Пароль"/>
-            <TextBox x:Name="Pass" Height="30" FontSize="20" TextWrapping="Wrap" Text=""/>
+            <PasswordBox x:Name="Pass" Height="30" FontSize="20" VerticalContentAlignment="Center" Password="" HorizontalContentAlignment="Center"/>
             <Button x:Name="StudBtn" FontSize="20" Content="Войти как студент" HorizontalAlignment="Center" Margin="30" Click="StudBtn_Click"/>
             <StackPanel Height="100" Orientation="Horizontal" Margin="100,0,100,0">
                 <Button x:Name="Open" Content="Войти" Width="75" HorizontalAlignment="Left" Margin="0,0,50,0" VerticalAlignment="Center" FontSize="20" Click="Open_Click"/>

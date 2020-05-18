@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestingAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AdminData">
+    <Key>
+      <PropertyRef Name="IdAdmin" />
+    </Key>
+    <Property Name="IdAdmin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MidName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Question_AdminData" FromRole="AdminData" ToRole="Question" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="IdQ" />
+    </Key>
+    <Property Name="IdQ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdAdmin" Type="Int32" Nullable="false" />
+    <Property Name="IdSubject" Type="Int32" Nullable="false" />
+    <Property Name="Question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdType" Type="Int32" Nullable="false" />
+    <Property Name="Answer_A" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Answer_B" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Answer_C" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Answer_D" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AdminData" Relationship="Self.FK_Question_AdminData" FromRole="Question" ToRole="AdminData" />
+    <NavigationProperty Name="QuestionType" Relationship="Self.FK_Question_QuestionType" FromRole="Question" ToRole="QuestionType" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_Question_Subject" FromRole="Question" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="QuestionType">
+    <Key>
+      <PropertyRef Name="IdType" />
+    </Key>
+    <Property Name="IdType" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeQuestion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Question_QuestionType" FromRole="QuestionType" ToRole="Question" />
+  </EntityType>
+  <EntityType Name="ResponseData">
+    <Key>
+      <PropertyRef Name="IdResponseData" />
+    </Key>
+    <Property Name="IdResponseData" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CorrectAnswer1" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer2" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer3" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer4" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer5" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer6" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer7" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer8" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer9" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer10" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer11" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer12" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer13" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer14" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer15" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer16" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer17" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer18" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer19" Type="Boolean" Nullable="false" />
+    <Property Name="CorrectAnswer20" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SessionData" Relationship="Self.FK_SessionData_ResponseData" FromRole="ResponseData" ToRole="SessionData" />
+  </EntityType>
+  <EntityType Name="SessionData">
+    <Key>
+      <PropertyRef Name="IdSessionData" />
+    </Key>
+    <Property Name="IdSessionData" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Q1ID" Type="Int32" Nullable="false" />
+    <Property Name="Q2ID" Type="Int32" Nullable="false" />
+    <Property Name="Q3ID" Type="Int32" Nullable="false" />
+    <Property Name="Q4ID" Type="Int32" Nullable="false" />
+    <Property Name="Q5ID" Type="Int32" Nullable="false" />
+    <Property Name="Q6ID" Type="Int32" Nullable="false" />
+    <Property Name="Q7ID" Type="Int32" Nullable="false" />
+    <Property Name="Q8ID" Type="Int32" Nullable="false" />
+    <Property Name="Q9ID" Type="Int32" Nullable="false" />
+    <Property Name="Q10ID" Type="Int32" Nullable="false" />
+    <Property Name="Q11ID" Type="Int32" Nullable="false" />
+    <Property Name="Q12ID" Type="Int32" Nullable="false" />
+    <Property Name="Q13ID" Type="Int32" Nullable="false" />
+    <Property Name="Q14ID" Type="Int32" Nullable="false" />
+    <Property Name="Q15ID" Type="Int32" Nullable="false" />
+    <Property Name="Q16ID" Type="Int32" Nullable="false" />
+    <Property Name="Q17ID" Type="Int32" Nullable="false" />
+    <Property Name="Q18ID" Type="Int32" Nullable="false" />
+    <Property Name="Q19ID" Type="Int32" Nullable="false" />
+    <Property Name="Q20ID" Type="Int32" Nullable="false" />
+    <Property Name="IdResponseData" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ResponseData" Relationship="Self.FK_SessionData_ResponseData" FromRole="SessionData" ToRole="ResponseData" />
+    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_SessionData" FromRole="SessionData" ToRole="StudStat" />
+  </EntityType>
+  <EntityType Name="Stud">
+    <Key>
+      <PropertyRef Name="IdStud" />
+    </Key>
+    <Property Name="IdStud" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MidName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_Stud" FromRole="Stud" ToRole="StudStat" />
+    <Property Name="Number" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StudStat">
+    <Key>
+      <PropertyRef Name="IdSession" />
+    </Key>
+    <Property Name="IdSession" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdStud" Type="Int32" Nullable="false" />
+    <Property Name="IdSubject" Type="Int32" Nullable="false" />
+    <Property Name="DateTimeSession" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdSessionData" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SessionData" Relationship="Self.FK_StudStat_SessionData" FromRole="StudStat" ToRole="SessionData" />
+    <NavigationProperty Name="Stud" Relationship="Self.FK_StudStat_Stud" FromRole="StudStat" ToRole="Stud" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_StudStat_Subject" FromRole="StudStat" ToRole="Subject" />
+    <Property Name="IdA" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="IdSubject" />
+    </Key>
+    <Property Name="IdSubject" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Question_Subject" FromRole="Subject" ToRole="Question" />
+    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_Subject" FromRole="Subject" ToRole="StudStat" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Question_AdminData">
+    <End Role="AdminData" Type="Self.AdminData" Multiplicity="1" />
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AdminData">
+        <PropertyRef Name="IdAdmin" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="IdAdmin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question_QuestionType">
+    <End Role="QuestionType" Type="Self.QuestionType" Multiplicity="1" />
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QuestionType">
+        <PropertyRef Name="IdType" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="IdType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="IdSubject" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="IdSubject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SessionData_ResponseData">
+    <End Role="ResponseData" Type="Self.ResponseData" Multiplicity="1" />
+    <End Role="SessionData" Type="Self.SessionData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponseData">
+        <PropertyRef Name="IdResponseData" />
+      </Principal>
+      <Dependent Role="SessionData">
+        <PropertyRef Name="IdResponseData" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudStat_SessionData">
+    <End Role="SessionData" Type="Self.SessionData" Multiplicity="1" />
+    <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SessionData">
+        <PropertyRef Name="IdSessionData" />
+      </Principal>
+      <Dependent Role="StudStat">
+        <PropertyRef Name="IdSessionData" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudStat_Stud">
+    <End Role="Stud" Type="Self.Stud" Multiplicity="1" />
+    <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stud">
+        <PropertyRef Name="IdStud" />
+      </Principal>
+      <Dependent Role="StudStat">
+        <PropertyRef Name="IdStud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudStat_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="IdSubject" />
+      </Principal>
+      <Dependent Role="StudStat">
+        <PropertyRef Name="IdSubject" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AdminData" EntityType="Self.AdminData" />
+    <EntitySet Name="Question" EntityType="Self.Question" />
+    <EntitySet Name="QuestionType" EntityType="Self.QuestionType" />
+    <EntitySet Name="ResponseData" EntityType="Self.ResponseData" />
+    <EntitySet Name="SessionData" EntityType="Self.SessionData" />
+    <EntitySet Name="Stud" EntityType="Self.Stud" />
+    <EntitySet Name="StudStat" EntityType="Self.StudStat" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_Question_AdminData" Association="Self.FK_Question_AdminData">
+      <End Role="AdminData" EntitySet="AdminData" />
+      <End Role="Question" EntitySet="Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question_QuestionType" Association="Self.FK_Question_QuestionType">
+      <End Role="QuestionType" EntitySet="QuestionType" />
+      <End Role="Question" EntitySet="Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question_Subject" Association="Self.FK_Question_Subject">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="Question" EntitySet="Question" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SessionData_ResponseData" Association="Self.FK_SessionData_ResponseData">
+      <End Role="ResponseData" EntitySet="ResponseData" />
+      <End Role="SessionData" EntitySet="SessionData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudStat_SessionData" Association="Self.FK_StudStat_SessionData">
+      <End Role="SessionData" EntitySet="SessionData" />
+      <End Role="StudStat" EntitySet="StudStat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudStat_Stud" Association="Self.FK_StudStat_Stud">
+      <End Role="Stud" EntitySet="Stud" />
+      <End Role="StudStat" EntitySet="StudStat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudStat_Subject" Association="Self.FK_StudStat_Subject">
+      <End Role="Subject" EntitySet="Subject" />
+      <End Role="StudStat" EntitySet="StudStat" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TestingAppModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TestingAppModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

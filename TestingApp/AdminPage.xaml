@@ -30,17 +30,21 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="StatBtn" Grid.ColumnSpan="2" Content="Просмотреть статистику" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="CreateQ21" Grid.ColumnSpan="2" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="EditQ" Grid.ColumnSpan="2" Content="Редактировать вопрос" Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="button_Copy2" Grid.ColumnSpan="2" Content="Button" Grid.Column="3" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="CreateQ" Grid.ColumnSpan="2" Content="Создать вопрос" Grid.Column="5" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2" Click="CreateQ_Click"/>
-        <Button x:Name="button_Copy4" Grid.ColumnSpan="2" Content="Button" Grid.Column="5" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="button_Copy5" Grid.ColumnSpan="2" Content="Button" Grid.Column="7" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2"/>
-        <Button x:Name="Setting" Grid.ColumnSpan="2" Grid.Column="7" HorizontalAlignment="Left" Margin="10,9,0,0" Grid.Row="4" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="2" Click="Setting_Click">
+        <Button x:Name="StatBtn" Grid.ColumnSpan="2" FontSize="15" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="3" Click="StatBtn_Click" Grid.Column="1" FontFamily="Morpheus">
+            <TextBlock TextAlignment="Center" FontFamily="Morpheus">Просмотреть<LineBreak/> статистику</TextBlock>
+        </Button>
+        <Button x:Name="EditQ" Grid.ColumnSpan="2" FontSize="15" Grid.Column="3" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="3" FontFamily="Morpheus">
+            <TextBlock TextAlignment="Center" FontFamily="Morpheus">Редакторовать<LineBreak/> вопрос</TextBlock>
+        </Button>
+        <Button x:Name="CreateQ" Grid.ColumnSpan="2" FontSize="15" Grid.Column="5" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="3" Click="CreateQ_Click" FontFamily="Morpheus">
+            <TextBlock TextAlignment="Center" FontFamily="Morpheus">Создать<LineBreak/> вопрос</TextBlock>
+        </Button>
+        <Button x:Name="Setting" Grid.ColumnSpan="2" Grid.Column="7" HorizontalAlignment="Left" Margin="10,40,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="109" Grid.RowSpan="3" Click="Setting_Click" FontFamily="Morpheus">
             <Image Source="Image/Setting.png" Width="70"></Image>
         </Button>
-        <Button x:Name="Close" Content="X" FontSize="31" Grid.Column="9" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Height="45" Click="Close_Click"/>
+        <Button x:Name="Close" Content="X" FontSize="31" Grid.Column="9" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="60" Height="45" Click="Close_Click" FontFamily="Ravie"/>
+        <Label x:Name="Welcome" Content="" HorizontalAlignment="Left" FontSize="15" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="5" Height="54" Width="380"/>
+        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="30,25,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="4" Width="245"/>
 
     </Grid>
 </Page>

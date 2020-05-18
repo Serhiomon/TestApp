@@ -40,6 +40,30 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="label" TextWrapping="Wrap" Text="Создание вопроса" FontSize="22" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="54" Width="190" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <ComboBox x:Name="QCB" Grid.ColumnSpan="4" Grid.Column="3" HorizontalAlignment="Left" Margin="10.333,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="247" Height="28" Grid.RowSpan="2" DropDownClosed="QCB_DropDownClosed">
+            <TextBlock x:Name="QV" TextWrapping="Wrap" Text="Вопрос с выбором ответа"/>
+            <TextBlock x:Name="QA" TextWrapping="Wrap" Text="Вопрос с вводом ответа"/>
+
+        </ComboBox>
+        <TextBlock x:Name="textBlock" FontSize="18" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Тип вопроса" VerticalAlignment="Top" Grid.ColumnSpan="3" Height="28" Grid.RowSpan="2" Width="129"/>
+        <TextBox x:Name="Q" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Left" Height="96" Margin="10.333,0,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="514" Grid.RowSpan="3" IsEnabled="False"/>
+        <TextBlock x:Name="textBlock_Copy" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вопрос" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,0,0,0"/>
+        <TextBox x:Name="A" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Left" Height="32" Margin="10.333,22,0,0" Grid.Row="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="514" Grid.RowSpan="2" Visibility="Hidden"/>
+        <TextBlock x:Name="Atxt" FontSize="18" HorizontalAlignment="Left" Grid.Row="10" TextWrapping="Wrap" Text="Ответ" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,22,0,0" Grid.RowSpan="2" Visibility="Hidden"/>
+        <StackPanel x:Name="BlockLBL" Grid.ColumnSpan="8" Grid.Column="3" HorizontalAlignment="Left" Height="128" Margin="10.333,22,0,0" Grid.Row="8" Grid.RowSpan="5" VerticalAlignment="Top" Width="514" Visibility="Hidden">
+            <TextBox x:Name="Q_a" FontSize="18" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2"  Height="32" Grid.Column="1" Margin="10,0,10,0"/>
+            <TextBox x:Name="Q_b" FontSize="18"  Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32"  Grid.Column="1" Margin="10,0,10,0"/>
+            <TextBox x:Name="Q_c" FontSize="18"  Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Grid.Column="1" Margin="10,0,10,0"/>
+            <TextBox x:Name="Q_d" FontSize="18"  Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32"  Grid.Column="1" Margin="10,0,10,0"/>
+        </StackPanel>
+        <StackPanel x:Name="BlockA" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="128" Margin="10,22,0,0" Grid.Row="8" Grid.RowSpan="5" VerticalAlignment="Top" Width="114" Grid.Column="1" Visibility="Hidden">
+            <TextBlock x:Name="A_a" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант А" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,0,0,0"/>
+            <TextBlock x:Name="A_b" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант B" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,0,-10,0"/>
+            <TextBlock x:Name="A_c" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант C" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,0,0,0"/>
+            <TextBlock x:Name="A_d" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант D" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="114" Grid.Column="1" Margin="10,0,0,0"/>
+        </StackPanel>
+        <Button x:Name="Save" Grid.ColumnSpan="2" Content="Сохранить" Grid.Column="10" HorizontalAlignment="Left" Margin="10.333,10,0,0" Grid.Row="12" VerticalAlignment="Top" Width="112" IsEnabled="False" Click="Save_Click" Height="44" Grid.RowSpan="2"/>
+        <Button x:Name="Cancel" Grid.ColumnSpan="2" Content="Отмена" HorizontalAlignment="Right" Margin="0,10,10,0" Grid.Row="12" VerticalAlignment="Top" Width="114" Click="Cancel_Click" Height="44" Grid.RowSpan="2"/>
 
     </Grid>
 </Page>

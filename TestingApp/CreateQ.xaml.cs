@@ -24,5 +24,38 @@ namespace TestingApp
         {
             InitializeComponent();
         }
+
+
+        private void QCB_DropDownClosed(object sender, EventArgs e)
+        {
+            if (QCB.Text == "Вопрос с выбором ответа")
+            {
+                Q.IsEnabled = true;
+                A.Visibility = Visibility.Hidden;
+                Atxt.Visibility = Visibility.Hidden;
+                BlockLBL.Visibility = Visibility.Visible;
+                BlockA.Visibility = Visibility.Visible;
+                Save.IsEnabled = true;
+            }
+            else if (QCB.Text == "Вопрос с вводом ответа")
+            {
+                Q.IsEnabled = true;
+                A.Visibility = Visibility.Visible;
+                Atxt.Visibility = Visibility.Visible;
+                BlockLBL.Visibility = Visibility.Hidden;
+                BlockA.Visibility = Visibility.Hidden;
+                Save.IsEnabled = true;
+            }
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AdminPage());
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

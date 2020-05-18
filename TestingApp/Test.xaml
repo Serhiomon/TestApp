@@ -1,0 +1,128 @@
+﻿<Page x:Class="TestingApp.Test"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestingApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Test">
+
+    <Grid>
+        <TabControl x:Name="TabControl" Margin="0,0,0,75" IsEnabled="True">
+            <TabItem Header="01" x:Name="N01">
+                <TabItem.Content>
+                    <Frame x:Name="Frame_01" VerticalAlignment="Center" HorizontalAlignment="Center" Content="1"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="02" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_02" VerticalAlignment="Center" HorizontalAlignment="Center" Content="2"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="03" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_03" VerticalAlignment="Center" HorizontalAlignment="Center" Content="3"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="04" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_04" VerticalAlignment="Center" HorizontalAlignment="Center" Content="4"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="05" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_05" VerticalAlignment="Center" HorizontalAlignment="Center" Content="5"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="06" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_06" VerticalAlignment="Center" HorizontalAlignment="Center" Content="6"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="07" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_07" VerticalAlignment="Center" HorizontalAlignment="Center" Content="7"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="08" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_08" VerticalAlignment="Center" HorizontalAlignment="Center" Content="8"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="09" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_09" VerticalAlignment="Center" HorizontalAlignment="Center" Content="9"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="10" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_10" VerticalAlignment="Center" HorizontalAlignment="Center" Content="10"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="11" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_11" VerticalAlignment="Center" HorizontalAlignment="Center" Content="11"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="12" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_12" VerticalAlignment="Center" HorizontalAlignment="Center" Content="12"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="13" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_13" VerticalAlignment="Center" HorizontalAlignment="Center" Content="13"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="14" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_14" VerticalAlignment="Center" HorizontalAlignment="Center" Content="14"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="15" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_15" VerticalAlignment="Center" HorizontalAlignment="Center" Content="15"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="16" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_16" VerticalAlignment="Center" HorizontalAlignment="Center" Content="16"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="17" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_17" VerticalAlignment="Center" HorizontalAlignment="Center" Content="17"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="18" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_18" VerticalAlignment="Center" HorizontalAlignment="Center" Content="18"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="19" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_19" VerticalAlignment="Center" HorizontalAlignment="Center" Content="19"></Frame>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem Header="20" >
+                <TabItem.Content>
+                    <Frame x:Name="Frame_20" VerticalAlignment="Center" HorizontalAlignment="Center" Content="20"></Frame>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+        <StackPanel HorizontalAlignment="Left" Height="75" Margin="0,375,0,0" VerticalAlignment="Top" Width="800" Orientation="Horizontal">
+            <TextBlock Name="tbTime" FontSize="35" VerticalAlignment="Center" Margin="10,14" IsEnabled="True" Width="135"/>
+            <Button x:Name="Pause" FontSize="37" Margin="10" Click="Pause_Click">
+                ⏸️
+            </Button>
+            <Button x:Name="lay" FontSize="37" Margin="10" Width="55" Content="▶️" Click="Play_Click"/>
+            <Button x:Name="button" Content="Завершить досрочно." Width="200" HorizontalAlignment="Center" Margin="10" FontFamily="VTMB_DlgMalk3" FontSize="22" Click="button_Click"/>
+            <StackPanel Orientation="Horizontal" Margin="100,0,0,0" Width="175">
+                <Button x:Name="Preview" Content="⏪" FontSize="35" Width="65" Margin="10" Click="Preview_Click"/>
+                <Button x:Name="Next" Content="⏩" FontSize="35" Width="65" Margin="10" Click="Next_Click"/>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3bfba8f9627044c8b7ae4dab8400612b" Name="Diagram1">
+        <EntityTypeShape EntityType="TestingAppModel.AdminData" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.Question" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.QuestionType" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.ResponseData" Width="1.5" PointX="1.5" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.SessionData" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.Stud" Width="1.5" PointX="3.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.StudStat" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.Subject" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestingAppModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="TestingAppModel.FK_Question_AdminData" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_Question_QuestionType" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_Question_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_SessionData_ResponseData" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_StudStat_SessionData" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_StudStat_Stud" ManuallyRouted="false" />
+        <AssociationConnector Association="TestingAppModel.FK_StudStat_Subject" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

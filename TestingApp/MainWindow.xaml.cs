@@ -20,8 +20,10 @@ namespace TestingApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        TestEntities TestDB = new TestEntities();
         public MainWindow()
         {
+            Buffer.MaxId = TestDB.Question.Max(p => p.IdQ);
             InitializeComponent();
         }
     }

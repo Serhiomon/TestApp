@@ -20,15 +20,28 @@ namespace TestingApp
     /// </summary>
     public partial class Disclaimer : Page
     {
+        static Random random = new Random();
         public Disclaimer()
-        {
+        {   if (Buffer.YesNo == 0)
+            {
+                for (int i = 0; i < 20; i++)
+                {
+                    Buffer.TestQ[i] = random.Next(0, Buffer.MaxId);
+                }
+            }
+            else
+            {
+
+            }
+            
+
             InitializeComponent();
             
         }
 
         private void OkTopBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new Test());
         }
 
         private void OkTopCB_Checked(object sender, RoutedEventArgs e)

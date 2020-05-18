@@ -1,0 +1,33 @@
+﻿<Page x:Class="TestingApp.TestForm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TestingApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TestForm" Loaded="Page_Loaded">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Height="430" Margin="10,10,0,0" VerticalAlignment="Top" Width="215">
+            <Label x:Name="textBlock_Copy" FontSize="18" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Вопрос" Height="80" Width="195" Margin="10,20,10,10"/>
+
+            <StackPanel x:Name="BlockA" HorizontalAlignment="Center" Height="135" Margin="10,5,-535,10" VerticalAlignment="Center"  Width="740" Visibility="Visible">
+                <TextBlock x:Name="A_a" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант А" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="175" Grid.Column="1" Margin="10,0,0,0"/>
+                <TextBlock x:Name="A_b" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант B" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="175" Grid.Column="1" Margin="10,0,0,0"/>
+                <TextBlock x:Name="A_c" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант C" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="175" Grid.Column="1" Margin="10,0,0,0"/>
+                <TextBlock x:Name="A_d" FontSize="18" HorizontalAlignment="Left" Grid.Row="6" TextWrapping="Wrap" Text="Вариант D" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="32" Width="175" Grid.Column="1" Margin="10,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="430" Margin="230,10,0,0" VerticalAlignment="Top" Width="560">
+            <TextBox Name="Question" Text="Здесь может быть ваша реклама" Height="85" FontSize="25" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Margin="23,20,23,10" TextWrapping="Wrap"  VerticalAlignment="Top" Width="514" IsEnabled="False"/>
+            <StackPanel x:Name="BlockLBL" HorizontalAlignment="Left" Height="140" Margin="23,0,0,10" VerticalAlignment="Top" Width="514" Visibility="Visible">
+                <RadioButton x:Name="A" Content=" " Margin="8" FontSize="15"/>
+                <RadioButton x:Name="B" Content=" " Margin="8" FontSize="15"/>
+                <RadioButton x:Name="C" Content=" " Margin="8" FontSize="15"/>
+                <RadioButton x:Name="D" Content=" " Margin="8" FontSize="15"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>

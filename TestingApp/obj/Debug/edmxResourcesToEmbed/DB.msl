@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TestingAppModelContainer" CdmEntityContainer="TestEntities">
+    <EntitySetMapping Name="AdminData">
+      <EntityTypeMapping TypeName="TestingAppModel.AdminData">
+        <MappingFragment StoreEntitySet="AdminData">
+          <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MidName" ColumnName="MidName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Question">
+      <EntityTypeMapping TypeName="TestingAppModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="IdQ" ColumnName="IdQ" />
+          <ScalarProperty Name="IdAdmin" ColumnName="IdAdmin" />
+          <ScalarProperty Name="IdSubject" ColumnName="IdSubject" />
+          <ScalarProperty Name="Question1" ColumnName="Question" />
+          <ScalarProperty Name="IdType" ColumnName="IdType" />
+          <ScalarProperty Name="Answer_A" ColumnName="Answer_A" />
+          <ScalarProperty Name="Answer_B" ColumnName="Answer_B" />
+          <ScalarProperty Name="Answer_C" ColumnName="Answer_C" />
+          <ScalarProperty Name="Answer_D" ColumnName="Answer_D" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuestionType">
+      <EntityTypeMapping TypeName="TestingAppModel.QuestionType">
+        <MappingFragment StoreEntitySet="QuestionType">
+          <ScalarProperty Name="IdType" ColumnName="IdType" />
+          <ScalarProperty Name="TypeQuestion" ColumnName="TypeQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResponseData">
+      <EntityTypeMapping TypeName="TestingAppModel.ResponseData">
+        <MappingFragment StoreEntitySet="ResponseData">
+          <ScalarProperty Name="IdResponseData" ColumnName="IdResponseData" />
+          <ScalarProperty Name="CorrectAnswer1" ColumnName="CorrectAnswer1" />
+          <ScalarProperty Name="CorrectAnswer2" ColumnName="CorrectAnswer2" />
+          <ScalarProperty Name="CorrectAnswer3" ColumnName="CorrectAnswer3" />
+          <ScalarProperty Name="CorrectAnswer4" ColumnName="CorrectAnswer4" />
+          <ScalarProperty Name="CorrectAnswer5" ColumnName="CorrectAnswer5" />
+          <ScalarProperty Name="CorrectAnswer6" ColumnName="CorrectAnswer6" />
+          <ScalarProperty Name="CorrectAnswer7" ColumnName="CorrectAnswer7" />
+          <ScalarProperty Name="CorrectAnswer8" ColumnName="CorrectAnswer8" />
+          <ScalarProperty Name="CorrectAnswer9" ColumnName="CorrectAnswer9" />
+          <ScalarProperty Name="CorrectAnswer10" ColumnName="CorrectAnswer10" />
+          <ScalarProperty Name="CorrectAnswer11" ColumnName="CorrectAnswer11" />
+          <ScalarProperty Name="CorrectAnswer12" ColumnName="CorrectAnswer12" />
+          <ScalarProperty Name="CorrectAnswer13" ColumnName="CorrectAnswer13" />
+          <ScalarProperty Name="CorrectAnswer14" ColumnName="CorrectAnswer14" />
+          <ScalarProperty Name="CorrectAnswer15" ColumnName="CorrectAnswer15" />
+          <ScalarProperty Name="CorrectAnswer16" ColumnName="CorrectAnswer16" />
+          <ScalarProperty Name="CorrectAnswer17" ColumnName="CorrectAnswer17" />
+          <ScalarProperty Name="CorrectAnswer18" ColumnName="CorrectAnswer18" />
+          <ScalarProperty Name="CorrectAnswer19" ColumnName="CorrectAnswer19" />
+          <ScalarProperty Name="CorrectAnswer20" ColumnName="CorrectAnswer20" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SessionData">
+      <EntityTypeMapping TypeName="TestingAppModel.SessionData">
+        <MappingFragment StoreEntitySet="SessionData">
+          <ScalarProperty Name="IdSessionData" ColumnName="IdSessionData" />
+          <ScalarProperty Name="Q1ID" ColumnName="Q1ID" />
+          <ScalarProperty Name="Q2ID" ColumnName="Q2ID" />
+          <ScalarProperty Name="Q3ID" ColumnName="Q3ID" />
+          <ScalarProperty Name="Q4ID" ColumnName="Q4ID" />
+          <ScalarProperty Name="Q5ID" ColumnName="Q5ID" />
+          <ScalarProperty Name="Q6ID" ColumnName="Q6ID" />
+          <ScalarProperty Name="Q7ID" ColumnName="Q7ID" />
+          <ScalarProperty Name="Q8ID" ColumnName="Q8ID" />
+          <ScalarProperty Name="Q9ID" ColumnName="Q9ID" />
+          <ScalarProperty Name="Q10ID" ColumnName="Q10ID" />
+          <ScalarProperty Name="Q11ID" ColumnName="Q11ID" />
+          <ScalarProperty Name="Q12ID" ColumnName="Q12ID" />
+          <ScalarProperty Name="Q13ID" ColumnName="Q13ID" />
+          <ScalarProperty Name="Q14ID" ColumnName="Q14ID" />
+          <ScalarProperty Name="Q15ID" ColumnName="Q15ID" />
+          <ScalarProperty Name="Q16ID" ColumnName="Q16ID" />
+          <ScalarProperty Name="Q17ID" ColumnName="Q17ID" />
+          <ScalarProperty Name="Q18ID" ColumnName="Q18ID" />
+          <ScalarProperty Name="Q19ID" ColumnName="Q19ID" />
+          <ScalarProperty Name="Q20ID" ColumnName="Q20ID" />
+          <ScalarProperty Name="IdResponseData" ColumnName="IdResponseData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stud">
+      <EntityTypeMapping TypeName="TestingAppModel.Stud">
+        <MappingFragment StoreEntitySet="Stud">
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="IdStud" ColumnName="IdStud" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MidName" ColumnName="MidName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudStat">
+      <EntityTypeMapping TypeName="TestingAppModel.StudStat">
+        <MappingFragment StoreEntitySet="StudStat">
+          <ScalarProperty Name="IdA" ColumnName="IdA" />
+          <ScalarProperty Name="IdSession" ColumnName="IdSession" />
+          <ScalarProperty Name="IdStud" ColumnName="IdStud" />
+          <ScalarProperty Name="IdSubject" ColumnName="IdSubject" />
+          <ScalarProperty Name="DateTimeSession" ColumnName="DateTimeSession" />
+          <ScalarProperty Name="IdSessionData" ColumnName="IdSessionData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subject">
+      <EntityTypeMapping TypeName="TestingAppModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="IdSubject" ColumnName="IdSubject" />
+          <ScalarProperty Name="Subject1" ColumnName="Subject" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TestingAppModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище TestingAppModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище TestingAppModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище TestingAppModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище TestingAppModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TestingAppModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище TestingAppModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="TestingAppModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище TestingAppModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище TestingAppModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
