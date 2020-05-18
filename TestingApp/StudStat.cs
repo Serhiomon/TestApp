@@ -23,6 +23,7 @@ namespace TestingApp
     
         public virtual SessionData SessionData { get; set; }
         public virtual Stud Stud { get; set; }
+        public virtual StudAnswer StudAnswer { get; set; }
         public virtual Subject Subject { get; set; }
     }
 }

@@ -94,24 +94,51 @@
     <EntitySetMapping Name="Stud">
       <EntityTypeMapping TypeName="TestingAppModel.Stud">
         <MappingFragment StoreEntitySet="Stud">
-          <ScalarProperty Name="Number" ColumnName="Number" />
           <ScalarProperty Name="IdStud" ColumnName="IdStud" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="MidName" ColumnName="MidName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudAnswer">
+      <EntityTypeMapping TypeName="TestingAppModel.StudAnswer">
+        <MappingFragment StoreEntitySet="StudAnswer">
+          <ScalarProperty Name="IdA" ColumnName="IdA" />
+          <ScalarProperty Name="StudAnswer01" ColumnName="StudAnswer01" />
+          <ScalarProperty Name="StudAnswer02" ColumnName="StudAnswer02" />
+          <ScalarProperty Name="StudAnswer03" ColumnName="StudAnswer03" />
+          <ScalarProperty Name="StudAnswer04" ColumnName="StudAnswer04" />
+          <ScalarProperty Name="StudAnswer05" ColumnName="StudAnswer05" />
+          <ScalarProperty Name="StudAnswer06" ColumnName="StudAnswer06" />
+          <ScalarProperty Name="StudAnswer07" ColumnName="StudAnswer07" />
+          <ScalarProperty Name="StudAnswer08" ColumnName="StudAnswer08" />
+          <ScalarProperty Name="StudAnswer09" ColumnName="StudAnswer09" />
+          <ScalarProperty Name="StudAnswer10" ColumnName="StudAnswer10" />
+          <ScalarProperty Name="StudAnswer11" ColumnName="StudAnswer11" />
+          <ScalarProperty Name="StudAnswer12" ColumnName="StudAnswer12" />
+          <ScalarProperty Name="StudAnswer13" ColumnName="StudAnswer13" />
+          <ScalarProperty Name="StudAnswer14" ColumnName="StudAnswer14" />
+          <ScalarProperty Name="StudAnswer15" ColumnName="StudAnswer15" />
+          <ScalarProperty Name="StudAnswer16" ColumnName="StudAnswer16" />
+          <ScalarProperty Name="StudAnswer17" ColumnName="StudAnswer17" />
+          <ScalarProperty Name="StudAnswer18" ColumnName="StudAnswer18" />
+          <ScalarProperty Name="StudAnswer19" ColumnName="StudAnswer19" />
+          <ScalarProperty Name="StudAnswer20" ColumnName="StudAnswer20" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="StudStat">
       <EntityTypeMapping TypeName="TestingAppModel.StudStat">
         <MappingFragment StoreEntitySet="StudStat">
-          <ScalarProperty Name="IdA" ColumnName="IdA" />
           <ScalarProperty Name="IdSession" ColumnName="IdSession" />
           <ScalarProperty Name="IdStud" ColumnName="IdStud" />
           <ScalarProperty Name="IdSubject" ColumnName="IdSubject" />
           <ScalarProperty Name="DateTimeSession" ColumnName="DateTimeSession" />
           <ScalarProperty Name="IdSessionData" ColumnName="IdSessionData" />
+          <ScalarProperty Name="IdA" ColumnName="IdA" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

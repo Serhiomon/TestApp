@@ -102,8 +102,35 @@
     <Property Name="MidName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
     <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_Stud" FromRole="Stud" ToRole="StudStat" />
     <Property Name="Number" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_Stud" FromRole="Stud" ToRole="StudStat" />
+  </EntityType>
+  <EntityType Name="StudAnswer">
+    <Key>
+      <PropertyRef Name="IdA" />
+    </Key>
+    <Property Name="IdA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudAnswer01" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer02" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer03" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer04" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer05" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer06" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer07" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer08" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer09" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer10" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer11" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer12" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer13" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer14" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer15" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer16" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer17" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer18" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer19" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="StudAnswer20" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="StudStat" Relationship="Self.FK_StudStat_StudAnswer" FromRole="StudAnswer" ToRole="StudStat" />
   </EntityType>
   <EntityType Name="StudStat">
     <Key>
@@ -114,10 +141,11 @@
     <Property Name="IdSubject" Type="Int32" Nullable="false" />
     <Property Name="DateTimeSession" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="IdSessionData" Type="Int32" Nullable="false" />
+    <Property Name="IdA" Type="Int32" Nullable="false" />
     <NavigationProperty Name="SessionData" Relationship="Self.FK_StudStat_SessionData" FromRole="StudStat" ToRole="SessionData" />
     <NavigationProperty Name="Stud" Relationship="Self.FK_StudStat_Stud" FromRole="StudStat" ToRole="Stud" />
+    <NavigationProperty Name="StudAnswer" Relationship="Self.FK_StudStat_StudAnswer" FromRole="StudStat" ToRole="StudAnswer" />
     <NavigationProperty Name="Subject" Relationship="Self.FK_StudStat_Subject" FromRole="StudStat" ToRole="Subject" />
-    <Property Name="IdA" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Subject">
     <Key>
@@ -210,6 +238,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_StudStat_StudAnswer">
+    <End Role="StudAnswer" Type="Self.StudAnswer" Multiplicity="1" />
+    <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudAnswer">
+        <PropertyRef Name="IdA" />
+      </Principal>
+      <Dependent Role="StudStat">
+        <PropertyRef Name="IdA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_StudStat_Subject">
     <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
     <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
@@ -229,6 +269,7 @@
     <EntitySet Name="ResponseData" EntityType="Self.ResponseData" />
     <EntitySet Name="SessionData" EntityType="Self.SessionData" />
     <EntitySet Name="Stud" EntityType="Self.Stud" />
+    <EntitySet Name="StudAnswer" EntityType="Self.StudAnswer" />
     <EntitySet Name="StudStat" EntityType="Self.StudStat" />
     <EntitySet Name="Subject" EntityType="Self.Subject" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -254,6 +295,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_StudStat_Stud" Association="Self.FK_StudStat_Stud">
       <End Role="Stud" EntitySet="Stud" />
+      <End Role="StudStat" EntitySet="StudStat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudStat_StudAnswer" Association="Self.FK_StudStat_StudAnswer">
+      <End Role="StudAnswer" EntitySet="StudAnswer" />
       <End Role="StudStat" EntitySet="StudStat" />
     </AssociationSet>
     <AssociationSet Name="FK_StudStat_Subject" Association="Self.FK_StudStat_Subject">

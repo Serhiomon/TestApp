@@ -96,6 +96,32 @@
     <Property Name="Birthday" Type="datetime" Nullable="false" />
     <Property Name="Number" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="StudAnswer">
+    <Key>
+      <PropertyRef Name="IdA" />
+    </Key>
+    <Property Name="IdA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudAnswer01" Type="varchar(max)" />
+    <Property Name="StudAnswer02" Type="varchar(max)" />
+    <Property Name="StudAnswer03" Type="varchar(max)" />
+    <Property Name="StudAnswer04" Type="varchar(max)" />
+    <Property Name="StudAnswer05" Type="varchar(max)" />
+    <Property Name="StudAnswer06" Type="varchar(max)" />
+    <Property Name="StudAnswer07" Type="varchar(max)" />
+    <Property Name="StudAnswer08" Type="varchar(max)" />
+    <Property Name="StudAnswer09" Type="varchar(max)" />
+    <Property Name="StudAnswer10" Type="varchar(max)" />
+    <Property Name="StudAnswer11" Type="varchar(max)" />
+    <Property Name="StudAnswer12" Type="varchar(max)" />
+    <Property Name="StudAnswer13" Type="varchar(max)" />
+    <Property Name="StudAnswer14" Type="varchar(max)" />
+    <Property Name="StudAnswer15" Type="varchar(max)" />
+    <Property Name="StudAnswer16" Type="varchar(max)" />
+    <Property Name="StudAnswer17" Type="varchar(max)" />
+    <Property Name="StudAnswer18" Type="varchar(max)" />
+    <Property Name="StudAnswer19" Type="varchar(max)" />
+    <Property Name="StudAnswer20" Type="varchar(max)" />
+  </EntityType>
   <EntityType Name="StudStat">
     <Key>
       <PropertyRef Name="IdSession" />
@@ -196,6 +222,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_StudStat_StudAnswer">
+    <End Role="StudAnswer" Type="Self.StudAnswer" Multiplicity="1" />
+    <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudAnswer">
+        <PropertyRef Name="IdA" />
+      </Principal>
+      <Dependent Role="StudStat">
+        <PropertyRef Name="IdA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_StudStat_Subject">
     <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
     <End Role="StudStat" Type="Self.StudStat" Multiplicity="*" />
@@ -246,6 +284,7 @@
     <EntitySet Name="ResponseData" EntityType="Self.ResponseData" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SessionData" EntityType="Self.SessionData" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stud" EntityType="Self.Stud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudAnswer" EntityType="Self.StudAnswer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="StudStat" EntityType="Self.StudStat" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -271,6 +310,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_StudStat_Stud" Association="Self.FK_StudStat_Stud">
       <End Role="Stud" EntitySet="Stud" />
+      <End Role="StudStat" EntitySet="StudStat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudStat_StudAnswer" Association="Self.FK_StudStat_StudAnswer">
+      <End Role="StudAnswer" EntitySet="StudAnswer" />
       <End Role="StudStat" EntitySet="StudStat" />
     </AssociationSet>
     <AssociationSet Name="FK_StudStat_Subject" Association="Self.FK_StudStat_Subject">

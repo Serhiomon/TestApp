@@ -33,6 +33,7 @@ namespace TestingApp
         public virtual DbSet<ResponseData> ResponseData { get; set; }
         public virtual DbSet<SessionData> SessionData { get; set; }
         public virtual DbSet<Stud> Stud { get; set; }
+        public virtual DbSet<StudAnswer> StudAnswer { get; set; }
         public virtual DbSet<StudStat> StudStat { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
